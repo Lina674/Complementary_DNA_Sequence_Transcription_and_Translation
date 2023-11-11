@@ -1,1 +1,1 @@
-# dna-rna-encoder
+# Dna-Rna-Encoder
