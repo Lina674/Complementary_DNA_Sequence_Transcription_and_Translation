@@ -96,6 +96,7 @@ class Program
                 }
                 string sqnc0 = String.Join("-", protSqnc_0);
                 Console.WriteLine("\nThe protein sequence is: " + sqnc0);
+                Console.WriteLine("\nRemember! There is no such thing as a stop amino acid.");
 
                 break;
             case "P":
@@ -160,6 +161,8 @@ class Program
                     string sqnc = String.Join("-", protSqnc);
                     Console.WriteLine("\nThe protein sequence is: " + sqnc);
                 }
+                Console.WriteLine("\nRemember! There is no such thing as a stop amino acid.");
+
                 break;
             case "TW":
                 Console.Write("\nInsert the DNA sequence: ");
@@ -220,7 +223,7 @@ class Program
                 }
                 string sqnc1 = String.Join("-", protSqnc1);
                 Console.WriteLine("\nThe protein sequence is: " + sqnc1);
-
+                Console.WriteLine("\nRemember! There is no such thing as a stop amino acid.");
 
                 break;
             case "T":
@@ -314,12 +317,11 @@ class Program
                     }
                     string sqnc = String.Join("-", protSqnc);
                     Console.WriteLine("\nThe protein sequence is: " + sqnc);
+                    Console.WriteLine("\nRemember! There is no such thing as a stop amino acid.");
                 }
-                //Console.WriteLine("\nRemember! There is no such thing as a stop amino acid.");
 
                 break;
         }
-        Console.WriteLine("\nRemember! There is no such thing as a stop amino acid.");
         Console.ReadKey();
     }
 }
