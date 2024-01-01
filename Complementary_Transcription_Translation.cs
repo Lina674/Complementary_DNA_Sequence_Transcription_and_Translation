@@ -315,10 +315,11 @@ class Program
                     string sqnc = String.Join("-", protSqnc);
                     Console.WriteLine("\nThe protein sequence is: " + sqnc);
                 }
-                Console.WriteLine("\nRemember! There is no such thing as a stop amino acid.");
+                //Console.WriteLine("\nRemember! There is no such thing as a stop amino acid.");
 
                 break;
         }
+        Console.WriteLine("\nRemember! There is no such thing as a stop amino acid.");
         Console.ReadKey();
     }
 }
