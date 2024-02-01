@@ -10,6 +10,7 @@ class Program
         Console.WriteLine(textFromFile);
 
         Console.WriteLine("\n" + "Complementary Base of DNA, Transcription + Translation, T + T (without start codon), RNA => Protein, or R => P (without start codon) (C, T, TW, P, PW)?" + "\n");
+        Console.WriteLine("\n"+"If using TW and/or PW, the number of bases must be divisible by 3.");
         string choice = Console.ReadLine();
         string choice1 = choice.ToUpper();
 
@@ -102,7 +103,7 @@ class Program
             case "P":
                 Console.Write("\nInsert RNA sequence: ");
                 string input_ = Console.ReadLine();
-                string input_0 = input_.ToUpper();
+                string input_0 = input_.ToUpper().Replace(" ", "");
 
 
                 int ini = input_0.IndexOf("AUG");
@@ -112,10 +113,13 @@ class Program
                 }
                 else
                 {
-                    string[] triplets_ = new string[100];
+                    string[] triplets_ = new string[1000];
 
                     for (int i = 0; ini < input_0.Length; i++)
                     {
+                        if(ini+3>input_0.Length) {
+                            break;
+                        }
                         string str = input_0.Substring(ini, 3);
                         triplets_[i] = str;
                         ini += 3;
@@ -229,7 +233,8 @@ class Program
             case "T":
                 Console.Write("\nInsert the DNA sequence: ");
                 string inpuTm = Console.ReadLine();
-                string inpuT0m = inpuTm.ToUpper();
+                string inpuT0m = inpuTm.ToUpper().Replace(" ", "");
+                
                 char[] input2m = inpuT0m.ToCharArray();
                 char[] newInput1m = new char[input2m.Length];
 
@@ -269,10 +274,13 @@ class Program
                 }
                 else
                 {
-                    string[] triplets = new string[100];
+                    string[] triplets = new string[1000];
 
                     for (int i = 0; inim < finalRm.Length; i++)
                     {
+                        if(inim+3>finalRm.Length) {
+                            break;
+                        }
                         string str = finalRm.Substring(inim, 3);
                         triplets[i] = str;
                         inim += 3;
@@ -322,6 +330,6 @@ class Program
 
                 break;
         }
-        Console.ReadKey();
+        //Console.ReadKey();
     }
 }
